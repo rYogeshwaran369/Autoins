@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 export default function Login() {
+    const navigate = useNavigate();
   const [username, setUsername] = useState('');
   const [vehno, setVehno] = useState('');
   const [alname,setAlname] = useState('');
@@ -29,7 +31,7 @@ export default function Login() {
     }
     if(vehno && username)
     {
-        handleSubmit()
+        navigate('./home')
     }
   };
 
